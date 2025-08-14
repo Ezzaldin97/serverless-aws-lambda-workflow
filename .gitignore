@@ -16,3 +16,6 @@ outputs/
 .coverage
 .hypothesis/
 collections/
+
+# data
+data/

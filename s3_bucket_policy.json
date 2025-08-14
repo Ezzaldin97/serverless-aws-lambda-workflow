@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowLambdaReadWriteObjectAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::581425339765:role/MathSolverRole"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::ezz-ds-ml-development/*"
+        },
+        {
+            "Sid": "AllowLambdaToListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::581425339765:role/MathSolverRole"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::ezz-ds-ml-development"
+        }
+    ]
+}
